@@ -1,0 +1,18 @@
+<!-- edit-task.component.html -->
+<form class="edit-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="text">Task</label>
+      <input type="text" name="text" [(ngModel)]="editedTask.text" id="text" />
+    </div>
+    <div class="form-control">
+      <label for="day">Day & Time</label>
+      <input type="text" name="day" [(ngModel)]="editedTask.day" id="day" />
+    </div>
+    <div class="form-control form-control-check">
+      <label for="reminder">Set Reminder</label>
+      <input type="checkbox" name="reminder" [(ngModel)]="editedTask.reminder" id="reminder" />
+    </div>
+    <button type="submit" class="btn btn-block">Update Task</button>
+    <button type="button" class="btn btn-block" (click)="cancelEdit()">Cancel</button>
+  </form>
+  
